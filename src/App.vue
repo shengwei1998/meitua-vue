@@ -1,5 +1,5 @@
 <template>
   <div>
-    1233
+    <router-view></router-view>
   </div>
 </template>
