@@ -7,27 +7,34 @@
       </div>
     </header>
     <section id="mt-center-content">
-         <van-cell-group class="center-content-cell">
-              <van-cell title="美团红包" icon="cash-on-deliver" is-link/>
-              <van-cell title="收货地址" icon="location-o" is-link/>
+         <van-cell-group class="center-content-cell"
+         v-for="(items,index) in tags"
+         :key="index">
+              <van-cell :title="items.name" :icon="items.icons" is-link :to='items.url'/>
+              <!-- <van-cell title="收货地址" icon="location-o" is-link/>
               <van-cell title="常见问题" icon="question-o" is-link/>
               <van-cell title="美团协议与说明" icon="notes-o" is-link/>
-              <van-cell title="退出登录" icon="close" is-link/>
+              <van-cell title="退出登录" icon="close" is-link/> -->
           </van-cell-group>
     </section>
     <footer id="footer">
-      <p>客服电话：10109777</p>
+      <p>客服电话：{{services_phone}}</p>
+      <!-- <p>{{ tags[0].name }}</p> -->
     </footer>
     <div class="footer-call">服务时间：9:00-23:00</div>
   </div>
 </template>
 <script>
+import { mapState } from 'vuex'
 export default {
   data() {
     return {
-      
+
     }
   },
+  computed:{
+    ...mapState(['tags','services_phone'])
+  }
 }
 </script>
 

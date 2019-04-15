@@ -1,3 +1,4 @@
 <template>
-  <div>首页</div>
+  <div>hoem</div>
 </template>
+

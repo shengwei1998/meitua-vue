@@ -14,6 +14,9 @@ export default new VueRouter({
         { path: '', redirect: '/home' }
       ]
     },
+    { path: '/couponlist', component: () => import('./views/couponlist.vue') },
+    { path: '/addresslist',component: () => import('./views/addresslist.vue') },
+    { path: '/address-edit',component: () => import('./views/address-edit.vue') },
     { path: '*', redirect: '/home' }
   ]
 })
