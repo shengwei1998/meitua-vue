@@ -1,9 +1,9 @@
 <template>
   <div>
     <router-view></router-view>
-    <van-tabbar v-model="active">
+    <van-tabbar v-model="active" active-color="orange">
       <van-tabbar-item icon="home-o" to="/home">首页</van-tabbar-item>
-      <van-tabbar-item icon="search" to="/ident">订单</van-tabbar-item>
+      <van-tabbar-item icon="balance-list-o" to="/ident">订单</van-tabbar-item>
       <van-tabbar-item icon="friends-o" to="/center">我的</van-tabbar-item>
     </van-tabbar>
   </div>
@@ -11,9 +11,14 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
-      active: 0
+
+    }
+  },
+  computed: {
+    active () {
+      return this.$route.meta.tabNumber
     }
   }
 }
