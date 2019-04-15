@@ -1,9 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <div>hoem</div>
-</template>
-
-=======
   <div>
     <div class="home_header">
       <van-search placeholder="请输入商家或商品名称" v-model="value" shape="round" class="box" />
@@ -204,4 +199,3 @@ export default {
     margin-left: 3px;
   }
 </style>
->>>>>>> shengdaye
