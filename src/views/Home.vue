@@ -96,13 +96,13 @@
 export default {
   data () {
     return {
-      value: ''
+      value: ' '
     }
   }
 }
 </script>
   <script>
-  
+
   </script>
 
 <style>

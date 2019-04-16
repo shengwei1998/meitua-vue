@@ -8,24 +8,68 @@
     </header>
     <section id="login-form-to">
       <div class="login-form-phone">
-        <input type="text" class="login-form-phone-input" placeholder="请输入手机号" maxlength="11">
-        <div class="login-form-phone-numtest" v-if='true'>发送验证码</div>
-        <div class="login-form-phone-send" v-else>发送验证码</div>
+        <input type="text" class="login-form-phone-input" placeholder="请输入手机号" maxlength="11"
+        v-model='der' @keyup="istologin(der)">
+        <div class="login-form-phone-numtest" v-if='!istologin(der)'>发送验证码</div>
+        <div class="login-form-phone-send" v-else  @click="codetest">发送验证码</div>
       </div>
       <div class="login-form-to-test">
-        <input type="text" class="iLoginComp-code-input" placeholder="请输入验证码">
+        <input type="text" class="iLoginComp-code-input" placeholder="请输入验证码" maxlength="6"
+        v-model="tet">
       </div>
       <div class="iLogincomp-opbtn-wrapper">
-        <button class="iLoginComp-login-btn">登录</button>
+        <button class="iLoginComp-login-btn"
+        @click="addNum(der)" v-if="(!istologin(der))||(!istobtn(tet))">登录</button>
+         <button class="iLoginComp-yellow-btn"
+        @click="addNum(der);toclick()"  v-else>登录</button>
       </div>
+
       <div class="login-net-watch">
         <a href="javascript:;">查看美团协议与说明</a>
       </div>
     </section>
   </div>
 </template>
+<script>
+import { mapMutations } from 'vuex'
+export default {
+  data() {
+    return {
+      der:'',
+      tet: ''
+    }
+  },
+  methods:{
+    ...mapMutations(['addNum']),
+    //手机正则
+    istologin(der){
+      let reglog=/^1[34578]\d{9}$/;
+      return reglog.test(der)
+    },
+    //验证码正则
+    istobtn(tet){
+      let btnreg=/^\d{6}$/;
+      return btnreg.test(tet)
+    },
+    //随机数
+    codetest(){
+      let arrcode=[];
+     for (let i = 0; i < 6; i++) {
+       arrcode.push(Math.floor(Math.random()*10))
+       }
+      this.tet=arrcode.join('')
+    },
+    toclick(){
+      this.$router.push('/')
+    }
+  }
+}
+</script>
 
 <style lang="scss">
+body{
+  background: #fff;
+}
   #login-header{
     width: 100%;
     min-height: 96px;
@@ -116,6 +160,21 @@
                 text-align: center;
                 color: #999;
                 background: #e5e5e5;
+                height: 46px;
+                line-height: 46px;
+                border-radius: 3px;
+                width: 100%;
+                display: block;
+                border: none;
+                cursor: pointer;
+                font-size: 18px;
+                user-select: none;
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+          }
+          .iLoginComp-yellow-btn{
+                text-align: center;
+                color: #fff;
+                background: #ffd300;
                 height: 46px;
                 line-height: 46px;
                 border-radius: 3px;
