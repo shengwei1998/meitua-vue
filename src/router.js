@@ -9,22 +9,24 @@ export default new VueRouter({
       component: () => import('./views/Index.vue'),
       children: [
         { path: 'home',
+          name: 'home',
           component: () => import('./views/Home.vue'),
+          meta: { tabNumber: 0 },
           children: [
             { path: 'synthesize', component: () => import('./components/synthesize.vue') },
             { path: 'topselling', component: () => import('./components/topselling.vue') },
             { path: '', redirect: '/home/synthesize' }
           ]
         },
-        { path: 'ident', component: () => import('./views/Ident.vue') },
-        { path: 'center', component: () => import('./views/center.vue') },
+        { path: 'ident', name: 'ident', component: () => import('./views/Ident.vue'), meta: { tabNumber: 1 } },
+        { path: 'center', name: 'center', component: () => import('./views/center.vue'), meta: { tabNumber: 2 } },
         { path: '', redirect: '/home' }
       ]
     },
     { path: '/couponlist', component: () => import('./views/couponlist.vue') },
     { path: '/addresslist', component: () => import('./views/addresslist.vue') },
     { path: '/address-edit', component: () => import('./views/address-edit.vue') },
-    { path: '/detail', component: () => import('./views/detail.vue') },
+    { path: '/detail/:id', component: () => import('./views/detail.vue') },
     { path: '*', redirect: '/home' }
   ]
 })

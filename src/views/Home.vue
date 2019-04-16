@@ -77,7 +77,7 @@
           <router-link to="/home/synthesize">综合排序<i class="iconfont icon-jiantou9"></i></router-link>
         </li>
         <li>
-          <router-link to="/home/topselling">销量最高</router-link>
+          <router-link to="/home/topselling" :style="tabColor">销量最高</router-link>
         </li>
         <li>
           <a href="javascript:">距离最近</a>
@@ -96,7 +96,11 @@
 export default {
   data () {
     return {
-      value: ''
+      value: '',
+      tabColor: {
+        color: '#000',
+        'font-weight': 900
+      }
     }
   }
 }
@@ -153,6 +157,7 @@ export default {
     align-items: center;
     justify-content: center;
     color: #333;
+    font-size: 16px;
   }
   .home_nearby::before{
     content: '';
