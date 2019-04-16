@@ -3,7 +3,7 @@
     <header id="mt-center-header">
       <div class="center-header-tittle">
         <div class="header-tittle-imgdai"><img src="//p1.meituan.net/codeman/e32b47a07b818bf9a1d4086a882c18a62282.png" ></div>
-        <p class="header-tittle-nikename">CfT590424928</p>
+        <p class="header-tittle-nikename">{{ getNikename }}</p>
       </div>
     </header>
     <section id="mt-center-content">
@@ -11,10 +11,9 @@
          v-for="(items,index) in tags"
          :key="index">
               <van-cell :title="items.name" :icon="items.icons" is-link :to='items.url'/>
-              <!-- <van-cell title="收货地址" icon="location-o" is-link/>
-              <van-cell title="常见问题" icon="question-o" is-link/>
-              <van-cell title="美团协议与说明" icon="notes-o" is-link/>
-              <van-cell title="退出登录" icon="close" is-link/> -->
+          </van-cell-group>
+          <van-cell-group>
+            <van-cell icon='close' title="退出登录" to="/home" @click="clear" is-link/>
           </van-cell-group>
     </section>
     <footer id="footer">
@@ -25,15 +24,17 @@
   </div>
 </template>
 <script>
-import { mapState } from 'vuex'
+import { mapState , mapGetters} from 'vuex'
 export default {
-  data () {
-    return {
 
-    }
-  },
   computed: {
-    ...mapState(['tags', 'services_phone'])
+    ...mapState(['tags', 'services_phone']),
+    ...mapGetters(['getNikename'])
+  },
+  methods:{
+    clear(){
+      localStorage.clear()
+    }
   }
 }
 </script>

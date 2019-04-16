@@ -19,9 +19,9 @@
       </div>
       <div class="iLogincomp-opbtn-wrapper">
         <button class="iLoginComp-login-btn"
-        @click="addNum(der)" v-if="(!istologin(der))||(!istobtn(tet))">登录</button>
+        v-if="(!istologin(der))||(!istobtn(tet))">登录</button>
          <button class="iLoginComp-yellow-btn"
-        @click="addNum(der);toclick()"  v-else>登录</button>
+        @click="toclick();addpwd({der:der,tet:tet})"  v-else>登录</button>
       </div>
 
       <div class="login-net-watch">
@@ -40,7 +40,7 @@ export default {
     }
   },
   methods:{
-    ...mapMutations(['addNum']),
+    ...mapMutations(['addpwd']),
     //手机正则
     istologin(der){
       let reglog=/^1[34578]\d{9}$/;
@@ -60,7 +60,7 @@ export default {
       this.tet=arrcode.join('')
     },
     toclick(){
-      this.$router.push('/')
+      this.$router.replace('/home')
     }
   }
 }

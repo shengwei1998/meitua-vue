@@ -105,9 +105,6 @@ export default {
   }
 }
 </script>
-  <script>
-
-  </script>
 
 <style>
   .home_header{
