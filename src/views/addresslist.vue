@@ -11,8 +11,8 @@
   </div>
 </template>
 <script>
-  export default {
-  data() {
+export default {
+  data () {
     return {
       chosenAddressId: '1',
       list: [
@@ -41,11 +41,11 @@
   },
 
   methods: {
-    onAdd() {
+    onAdd () {
       this.$router.push('/address-edit')
     },
 
-    onEdit() {
+    onEdit () {
       console.log('1')
     }
   }

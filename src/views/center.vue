@@ -27,17 +27,16 @@
 <script>
 import { mapState } from 'vuex'
 export default {
-  data() {
+  data () {
     return {
 
     }
   },
-  computed:{
-    ...mapState(['tags','services_phone'])
+  computed: {
+    ...mapState(['tags', 'services_phone'])
   }
 }
 </script>
-
 
 <style lang="scss">
   #mt-center{
@@ -119,7 +118,3 @@ export default {
 <style>
   @import "../style/reset.css";
 </style>
-
-
-
-
