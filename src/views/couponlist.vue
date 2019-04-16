@@ -1,5 +1,5 @@
 <template>
-  <div id="mt-couponlist">
+<div id="mt-couponlist">
 
 <van-popup v-model="showList" position="bottom">
  <van-nav-bar

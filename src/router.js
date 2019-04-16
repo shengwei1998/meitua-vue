@@ -16,8 +16,28 @@ export default new VueRouter({
             { path: '', redirect: '/home/synthesize' }
           ]
         },
-        { path: 'ident', component: () => import('./views/Ident.vue') },
-        { path: 'center', component: () => import('./views/center.vue') },
+        { path: 'ident',
+        component: () => import('./views/Ident.vue'),
+        beforeEnter: (to, from, next) => {
+          var islogin=false;
+          if(!islogin){
+            next('/login')
+          }else{
+            next()
+          }
+      }
+    },
+        { path: 'center',
+          component: () => import('./views/center.vue'),
+          beforeEnter: (to, from, next) => {
+            var islogin=false;
+            if(!islogin){
+              next('/login')
+            }else{
+              next()
+            }
+          }
+        },
         { path: '', redirect: '/home' }
       ]
     },
@@ -27,6 +47,7 @@ export default new VueRouter({
     { path: '/detail', component: () => import('./views/detail.vue') },
     { path: '/questions', component: () => import('./views/questions.vue') },
     { path: '/couponlist', component: () => import('./views/couponlist.vue') },
+    { path: '/login', component: () => import('./views/login.vue') ,},
     { path: '*', redirect: '/home' }
   ]
 })

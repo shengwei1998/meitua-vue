@@ -39,10 +39,12 @@ export default {
 </script>
 
 <style lang="scss">
+body{
+  background: rgb(240, 240, 240);
+}
   #mt-center{
     width: 100%;
-    min-height: 667px;
-    background: rgb(240, 240, 240);
+    height: auto;
     //头部
     #mt-center-header{
       width: 100%;
