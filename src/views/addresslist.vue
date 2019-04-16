@@ -1,13 +1,18 @@
 <template>
   <div>
+    <van-nav-bar
+        title="地址列表"
+        left-arrow
+        @click-left="onClickLeft"
+      />
     <van-address-list
-  v-model="chosenAddressId"
-  :list="list"
-  :disabled-list="disabledList"
-  disabled-text="以下地址超出配送范围"
-  @add="onAdd"
-  @edit="onEdit"
-/>
+      v-model="chosenAddressId"
+      :list="list"
+      :disabled-list="disabledList"
+      disabled-text="以下地址超出配送范围"
+      @add="onAdd"
+      @edit="onEdit"
+    />
   </div>
 </template>
 <script>
@@ -47,6 +52,9 @@ export default {
 
     onEdit () {
       console.log('1')
+    },
+    onClickLeft(){
+      this.$router.back()
     }
   }
 }
