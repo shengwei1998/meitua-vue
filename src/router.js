@@ -9,7 +9,9 @@ export default new VueRouter({
       component: () => import('./views/Index.vue'),
       children: [
         { path: 'home',
+          name: 'home',
           component: () => import('./views/Home.vue'),
+          meta: { tabNumber: 0 },
           children: [
             { path: 'synthesize', component: () => import('./components/synthesize.vue') },
             { path: 'topselling', component: () => import('./components/topselling.vue') },
@@ -44,10 +46,10 @@ export default new VueRouter({
     { path: '/couponlist', component: () => import('./views/couponlist.vue') },
     { path: '/addresslist', component: () => import('./views/addresslist.vue') },
     { path: '/address-edit', component: () => import('./views/address-edit.vue') },
-    { path: '/detail', component: () => import('./views/detail.vue') },
     { path: '/questions', component: () => import('./views/questions.vue') },
     { path: '/couponlist', component: () => import('./views/couponlist.vue') },
     { path: '/login', component: () => import('./views/login.vue') ,},
+    { path: '/detail/:id', component: () => import('./views/detail.vue') },
     { path: '*', redirect: '/home' }
   ]
 })

@@ -1,14 +1,17 @@
 <template>
   <div>
     <ul class="synth_allLi">
-      <li>
-        <a href="javascript:">
+      <li
+        v-for="item in synList"
+        :key="item.id"
+      >
+        <router-link :to="'/detail/' + item.id">
           <div class="synth_left">
-            <img src="http://p1.meituan.net/aichequan/a88918ba8699e15a5d16d5d7e09ad0022192.png" alt="" class="syn_img1">
-            <img src="http://p0.meituan.net/waimaipoi/198e1251c1e17abc5ddf615a81eeb03938512.jpg" alt="" class="syn_img2">
+            <img :src="item.poiTypeIcon" alt="" class="syn_img1">
+            <img :src="item.img" alt="" class="syn_img2">
           </div>
           <div class="synth_right">
-            <div class="box01">新世界茶餐厅（福永店）</div>
+            <div class="box01">{{ item.name }}</div>
             <div class="box02">
               <div class="box02_left">
                 <div class="china">
@@ -18,32 +21,89 @@
                   <i class="iconfont icon-wujiaoxing"></i>
                   <i class="iconfont icon-wujiaoxing"></i>
                 </div>
-                <span class="syn_aa">4.7</span>
-                <span class="syn_bb">月售7295</span>
+                <span class="syn_aa">{{ item.grade }}</span>
+                <span class="syn_bb">月售 {{ item.onSale }}</span>
               </div>
               <div class="box02_right">
-                <span>40分钟</span>
-                <span class="befor">3.4km</span>
+                <span>{{ item.deliveryTimeTip }}</span>
+                <span class="befor">{{ item.distance }}</span>
               </div>
             </div>
             <div class="box03">
-              <span>起送￥28</span>
-              <span class="befor">配送￥7</span>
-              <span class="befor">人均￥42</span>
+              <span>起送{{ item.minPriceTip }}</span>
+              <span class="befor">配送 {{ item.shippingFeeTip}}</span>
+              <span class="befor">人均 {{ item.averagePriceTip }}</span>
               <span class="org">美团专送</span>
             </div>
-            <div class="box04"></div>
+            <div class="box04">
+              <p>
+                <img src="http://p0.meituan.net/xianfu/f8bc8dffdbc805878aa3801a33f563cd1001.png" alt="">
+                {{ item.info }}
+              </p>
+              <p>
+                <img :src="item.invoice" alt="">
+                {{ item.discount }}
+              </p>
+            </div>
           </div>
-        </a>
+        </router-link>
       </li>
+      <div class="load_more" @click="loadMore" v-if="pageNum < totalPage">加载更多....</div>
+      <div class="load_more" v-else>你太厉害了！到底啦..</div>
     </ul>
   </div>
 </template>
 
+<script>
+import Axios from 'axios'
+export default {
+  data () {
+    return {
+      synList: [],
+      pageNum: 1,
+      pageSize: 6,
+      totalSize: 10
+    }
+  },
+  computed: {
+    totalPage () {
+      return Math.ceil(this.totalSize / this.pageSize)
+    }
+  },
+  methods: {
+    onLoad () {
+      Axios.get('/json/list.json', {
+        pageNum: this.pageNum,
+        pageSize: this.pageSize
+      }).then(res => {
+        if (res.status === 200) {
+          let data = res.data
+          this.totalSize = data.length
+          this.synList = this.synList.concat(data.splice((this.pageNum - 1) * this.pageSize, this.pageSize))
+        } else {
+          alert(res.msg)
+        }
+      })
+    },
+    loadMore () {
+      this.pageNum++
+      this.onLoad()
+    }
+  },
+  created () {
+    this.onLoad()
+  }
+}
+</script>
+
 <style>
 .synth_allLi{
   margin-top: 10px;
+  padding-bottom: 50px;
 }
+  .synth_allLi>li{
+    margin-bottom: 20px;
+  }
   .synth_allLi>li>a{
     display: flex;
     padding: 0 10px;
@@ -132,5 +192,24 @@
     background: orange;
     border-top-left-radius: 5px;
     border-bottom-right-radius: 5px;
+  }
+  .box04{
+    display: flex;
+    flex-direction: column;
+  }
+  .box04>p{
+    color: #666;
+    font-size: 12px;
+    margin: 3px 0;
+  }
+  .box04>p>img{
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+  }
+  .load_more{
+    text-align: center;
+    height: 36px;
+    line-height: 36px;
   }
 </style>
