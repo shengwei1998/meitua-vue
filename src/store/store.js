@@ -2,8 +2,8 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex)
 
+// eslint-disable-next-line no-unused-vars
 const store = new Vuex.Store({
-
   state: {
     // question页面
     questions_tittle: [{
@@ -36,23 +36,33 @@ const store = new Vuex.Store({
       { name: '美团红包', icons: 'cash-on-deliver', url: '/couponlist' },
       { name: '收货地址', icons: 'location-o', url: '/addresslist' },
       { name: '常见问题', icons: 'question-o', url: '/questions' },
-      { name: '美团协议与说明', icons: 'notes-o', url: '/agreement' },
-      { name: '退出登录', icons: 'close', url: '/' }
+      { name: '美团协议与说明', icons: 'notes-o', url: '/agreement' }
     ],
     services_phone: '10109777',
     // login登录页面
-    login_phonenum: []
+    login_phonenum: localStorage.getItem('pwd') ? JSON.parse(localStorage.getItem('pwd')) : {}
   },
   mutations: {
-    addNum (state, nums) {
-      state.login_phonenum.push(nums)
+    addpwd (state, pwds) {
+      state.login_phonenum[pwds.der] = pwds.tet
+      localStorage.setItem('pwd', JSON.stringify(state.login_phonenum))
+    },
+    removepwd (state) {
+      state.login_phonenum = {}
+      localStorage.clear()
+    },
+    saveadress (state, addata) {
+      state.adressd.push(addata)
     }
   },
   getters: {
-
-  },
-  actions: {
-
+    getNikename (state) {
+      for (const key in state.login_phonenum) {
+        if (state.login_phonenum.hasOwnProperty(key)) {
+          const element = key
+          return element
+        }
+      }
+    }
   }
 })
-export default store

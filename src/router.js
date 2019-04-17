@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-export default new VueRouter({
+let router = new VueRouter({
   routes: [
     { path: '/',
       component: () => import('./views/Index.vue'),
@@ -21,8 +21,7 @@ export default new VueRouter({
         { path: 'ident',
           component: () => import('./views/Ident.vue'),
           beforeEnter: (to, from, next) => {
-            var islogin = false
-            if (!islogin) {
+            if (!localStorage.getItem('pwd')) {
               next('/login')
             } else {
               next()
@@ -32,8 +31,7 @@ export default new VueRouter({
         { path: 'center',
           component: () => import('./views/center.vue'),
           beforeEnter: (to, from, next) => {
-            var islogin = false
-            if (!islogin) {
+            if (!localStorage.getItem('pwd')) {
               next('/login')
             } else {
               next()
@@ -53,3 +51,7 @@ export default new VueRouter({
     { path: '*', redirect: '/home' }
   ]
 })
+router.beforeEach((to, from, next) => {
+  next()
+})
+export default router

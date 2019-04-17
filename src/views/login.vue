@@ -19,13 +19,13 @@
       </div>
       <div class="iLogincomp-opbtn-wrapper">
         <button class="iLoginComp-login-btn"
-        @click="addNum(der)" v-if="(!istologin(der))||(!istobtn(tet))">登录</button>
+        v-if="(!istologin(der))||(!istobtn(tet))">登录</button>
          <button class="iLoginComp-yellow-btn"
-        @click="addNum(der);toclick()"  v-else>登录</button>
+        @click="toclick();addpwd({der:der,tet:tet})" v-else>登录</button>
       </div>
 
       <div class="login-net-watch">
-        <a href="javascript:;">查看美团协议与说明</a>
+        <a href="javascript:">查看美团协议与说明</a>
       </div>
     </section>
   </div>
@@ -40,18 +40,15 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(['addNum']),
-    // 手机正则
+    ...mapMutations(['addpwd']),
     istologin (der) {
       let reglog = /^1[34578]\d{9}$/
       return reglog.test(der)
     },
-    // 验证码正则
     istobtn (tet) {
       let btnreg = /^\d{6}$/
       return btnreg.test(tet)
     },
-    // 随机数
     codetest () {
       let arrcode = []
       for (let i = 0; i < 6; i++) {
@@ -61,6 +58,9 @@ export default {
     },
     toclick () {
       this.$router.push('/')
+    },
+    toclick () {
+      this.$router.replace('/home')
     }
   }
 }
@@ -93,11 +93,9 @@ body{
         }
     }
   }
-  //登录
   #login-form-to {
     input::-webkit-input-placeholder {
-        /* placeholder颜色  */
-        color: #aab2bd;
+      color: #aab2bd;
     }
     width: 100%;
     padding: 12px;
@@ -111,7 +109,6 @@ body{
       .login-form-phone-input{
             flex: 1;
             border: 0;
-            -webkit-tap-highlight-color: rgba(0,0,0,0);
             font-size: 16px;
       }
       .login-form-phone-numtest{
@@ -125,7 +122,6 @@ body{
         border-radius: 4px;
         box-sizing: border-box;
         cursor: pointer;
-        -webkit-tap-highlight-color: rgba(0,0,0,0)
       }
       .login-form-phone-send{
           color: #ffd300;
@@ -136,7 +132,6 @@ body{
           border-radius: 4px;
           box-sizing: border-box;
           cursor: pointer;
-          -webkit-tap-highlight-color: rgba(0,0,0,0)
       }
     }
     .login-form-to-test{
@@ -149,7 +144,6 @@ body{
       .iLoginComp-code-input{
             flex: 1;
             border: 0;
-            -webkit-tap-highlight-color: rgba(0,0,0,0);
             font-size: 16px;
       }
     }
@@ -157,19 +151,18 @@ body{
           font-size: 16px;
           margin-top: 30px;
           .iLoginComp-login-btn{
-                text-align: center;
-                color: #999;
-                background: #e5e5e5;
-                height: 46px;
-                line-height: 46px;
-                border-radius: 3px;
-                width: 100%;
-                display: block;
-                border: none;
-                cursor: pointer;
-                font-size: 18px;
-                user-select: none;
-                -webkit-tap-highlight-color: rgba(0,0,0,0);
+            text-align: center;
+            color: #999;
+            background: #e5e5e5;
+            height: 46px;
+            line-height: 46px;
+            border-radius: 3px;
+            width: 100%;
+            display: block;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            user-select: none;
           }
           .iLoginComp-yellow-btn{
                 text-align: center;
@@ -184,7 +177,6 @@ body{
                 cursor: pointer;
                 font-size: 18px;
                 user-select: none;
-                -webkit-tap-highlight-color: rgba(0,0,0,0);
           }
     }
     .login-net-watch{
