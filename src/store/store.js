@@ -43,7 +43,10 @@ const store = new Vuex.Store({
       state.login_phonenum[pwds.der]=pwds.tet
       localStorage.setItem('pwd',JSON.stringify(state.login_phonenum))
     },
-
+    removepwd(state){
+      state.login_phonenum={}
+      localStorage.clear()
+    }
   },
   getters: {
     getNikename(state){

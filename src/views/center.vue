@@ -13,7 +13,7 @@
               <van-cell :title="items.name" :icon="items.icons" is-link :to='items.url'/>
           </van-cell-group>
           <van-cell-group>
-            <van-cell icon='close' title="退出登录" to="/home" @click="clear" is-link/>
+            <van-cell icon='close' title="退出登录" to="/home" @click="clear();removepwd()" is-link/>
           </van-cell-group>
     </section>
     <footer id="footer">
@@ -24,7 +24,7 @@
   </div>
 </template>
 <script>
-import { mapState , mapGetters} from 'vuex'
+import { mapState , mapGetters ,mapMutations} from 'vuex'
 export default {
 
   computed: {
@@ -34,14 +34,15 @@ export default {
   methods:{
     clear(){
       localStorage.clear()
-    }
+    },
+    ...mapMutations(['removepwd'])
   }
 }
 </script>
 
 <style lang="scss">
 body{
-  background: rgb(240, 240, 240);
+  background: #fff;
 }
   #mt-center{
     width: 100%;
