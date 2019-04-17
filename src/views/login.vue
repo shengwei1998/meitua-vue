@@ -33,33 +33,33 @@
 <script>
 import { mapMutations } from 'vuex'
 export default {
-  data() {
+  data () {
     return {
-      der:'',
+      der: '',
       tet: ''
     }
   },
-  methods:{
+  methods: {
     ...mapMutations(['addNum']),
-    //手机正则
-    istologin(der){
-      let reglog=/^1[34578]\d{9}$/;
+    // 手机正则
+    istologin (der) {
+      let reglog = /^1[34578]\d{9}$/
       return reglog.test(der)
     },
-    //验证码正则
-    istobtn(tet){
-      let btnreg=/^\d{6}$/;
+    // 验证码正则
+    istobtn (tet) {
+      let btnreg = /^\d{6}$/
       return btnreg.test(tet)
     },
-    //随机数
-    codetest(){
-      let arrcode=[];
-     for (let i = 0; i < 6; i++) {
-       arrcode.push(Math.floor(Math.random()*10))
-       }
-      this.tet=arrcode.join('')
+    // 随机数
+    codetest () {
+      let arrcode = []
+      for (let i = 0; i < 6; i++) {
+        arrcode.push(Math.floor(Math.random() * 10))
+      }
+      this.tet = arrcode.join('')
     },
-    toclick(){
+    toclick () {
       this.$router.push('/')
     }
   }
@@ -200,4 +200,3 @@ body{
     }
   }
 </style>
-

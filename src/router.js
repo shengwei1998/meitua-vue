@@ -19,23 +19,23 @@ export default new VueRouter({
           ]
         },
         { path: 'ident',
-        component: () => import('./views/Ident.vue'),
-        beforeEnter: (to, from, next) => {
-          var islogin=false;
-          if(!islogin){
-            next('/login')
-          }else{
-            next()
+          component: () => import('./views/Ident.vue'),
+          beforeEnter: (to, from, next) => {
+            var islogin = false
+            if (!islogin) {
+              next('/login')
+            } else {
+              next()
+            }
           }
-      }
-    },
+        },
         { path: 'center',
           component: () => import('./views/center.vue'),
           beforeEnter: (to, from, next) => {
-            var islogin=false;
-            if(!islogin){
+            var islogin = false
+            if (!islogin) {
               next('/login')
-            }else{
+            } else {
               next()
             }
           }
@@ -48,8 +48,8 @@ export default new VueRouter({
     { path: '/address-edit', component: () => import('./views/address-edit.vue') },
     { path: '/questions', component: () => import('./views/questions.vue') },
     { path: '/couponlist', component: () => import('./views/couponlist.vue') },
-    { path: '/login', component: () => import('./views/login.vue') ,},
-    { path: '/detail/:id', component: () => import('./views/detail.vue') },
+    { path: '/login', component: () => import('./views/login.vue') },
+    { path: '/detail/:id', name: 'detail', component: () => import('./views/detail.vue') },
     { path: '*', redirect: '/home' }
   ]
 })

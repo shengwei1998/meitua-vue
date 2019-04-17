@@ -1,8 +1,8 @@
 [
   {
     "id": 100,
-    "name": "外婆家（深圳壹方城店）",
-    "img": "http://p1.meituan.net/waimaipoi/0a4b0c043c0e5ac8b350961285db9f7b18192.jpg",
+    "name": "御香轩蛋糕店",
+    "img": "http://p1.meituan.net/business/ff97e510a6a4f0926f8ee6bb22fcaa4e665032.jpg",
     "grade": "4.4",
     "onSale": "9999+",
     "minPriceTip": "¥20",
@@ -13,12 +13,113 @@
     "info": "满28减5; 满50减12",
     "discount": "折扣商品6.5折起",
     "invoice": "http://p1.meituan.net/xianfu/9c997ecce6150671b8459738a26f8bd9767.png",
-    "poiTypeIcon": "http://p0.meituan.net/aichequan/eb83cb963e67bc0ea4db4d7aef69d62f2578.png"
+    "poiTypeIcon": "http://p0.meituan.net/aichequan/eb83cb963e67bc0ea4db4d7aef69d62f2578.png",
+    "goods": [
+      {
+        "goodId": 100,
+        "spuName": "幸福生活",
+        "img": "http://p0.meituan.net/wmproductdwm/e5d0b3ca50b8f8d765f8f5b2fd80c12a155627.jpg",
+        "spuDesc": "约5磅，图片上的水果会随着季节变化而变动。蛋糕都是现定现做的，请提前2小时下单。全程免费配送，",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 167.04,
+        "originPrice": 288
+      },
+      {
+        "goodId": 101,
+        "spuName": "2磅特惠水果蛋糕",
+        "img": "http://p0.meituan.net/wmproductdwm/cabddde74799e9fad1b828a7ec648d36151780.jpg",
+        "spuDesc": "蛋糕现定现做，制作与配送需约1一2小时，蛋糕上的水果随季节的变化而改变，如有问题欢迎致电13380361006",
+        "skuPromotionInfo": "5折 限1份",
+        "currentPrice": 98,
+        "originPrice": 196
+      },
+      {
+        "goodId": 102,
+        "spuName": "3磅热销水果蛋糕",
+        "img": "http://p0.meituan.net/wmproduct/8d4d997e5030fe83a423af9ce22a544b403650.jpg",
+        "spuDesc": "蛋糕现定现做，制作与配送需约1一2小时，如对水果有要求请备注，蛋糕上的水果随季节的变化而改变，如有问题欢迎致电13380361006",
+        "skuPromotionInfo": "6.2折 限1份",
+        "currentPrice": 116.56,
+        "originPrice": 188
+      },
+      {
+        "goodId": 103,
+        "spuName": "情定一生5磅",
+        "img": "http://p1.meituan.net/wmproductdwm/bfad5fad67601a0d3232a41625c8dcc6136937.jpg",
+        "spuDesc": "蛋糕现定现做，制作与配送需约1一2小时，新鲜水果夹心（芒果，火龙果，哈密瓜），如对水果有要求请备注，蛋糕上的水果随季节的变化而改变，如有问题欢迎致电13380361006",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 167.44,
+        "originPrice": 299
+      },
+      {
+        "goodId": 104,
+        "spuName": "幸福多多3磅",
+        "img": "http://p1.meituan.net/wmproduct/27719e997a0cf79bc44be95d582e0a85378577.jpg",
+        "spuDesc": "蛋糕现定现做，制作与配送需约1一2小时，如对水果有要求请备注，蛋糕上的水果随季节的变化而改变，如有问题欢迎致电13380361006",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 117.6,
+        "originPrice": 188
+      },
+      {
+        "goodId": 105,
+        "spuName": "榴芒双拼2",
+        "img": "http://p0.meituan.net/wmproductdwm/af2777e868ac6cf6844dd20deb9b7338125841.jpg",
+        "spuDesc": "一半新鲜夹心，一半榴莲夹心，图片上的水果会随着季节变化而变动。蛋糕都是现定现做的，请提前2小时下单。",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 107.6,
+        "originPrice": 168
+      },
+      {
+        "goodId": 106,
+        "spuName": "2磅幸福一家子01",
+        "img": "http://p1.meituan.net/wmproductdwm/da6b53d30eec084d4d61687848464c23183820.jpg",
+        "spuDesc": "蛋糕现定现做，制作与配送需约1一2小时，如对水果有要求请备注，蛋糕上的水果随季节的变化而改变，如有问题欢迎致电13380361006",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 95.04,
+        "originPrice": 198
+      },
+      {
+        "goodId": 107,
+        "spuName": "土豪蛋糕3磅",
+        "img": "http://p0.meituan.net/wmproductdwm/3992cfb9f0fa8884e8f5b53720f5a110177815.jpg",
+        "spuDesc": "蛋糕现定现做，制作与配送需约1一2小时，如对水果有要求请备注，蛋糕上的水果随季节的变化而改变，如有问题欢迎致电13380361006",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 128.7,
+        "originPrice": 268
+      },
+      {
+        "goodId": 108,
+        "spuName": "3磅全心全意888",
+        "img": "http://p0.meituan.net/wmproductdwm/83a0c94d695a88cf664f7c0ea600d5c5254749.jpg",
+        "spuDesc": "蛋糕现定现做，制作与配送需约1一2小时，如对水果有要求请备注，蛋糕上的水果随季节的变化而改变，如有问题欢迎致电13380361006",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 127.36,
+        "originPrice": 199
+      },
+      {
+        "goodId": 109,
+        "spuName": "欢聚一堂3磅",
+        "img": "http://p0.meituan.net/wmproductdwm/9a4f4bcd1eae57a92465c7f5c3c7b58e158313.jpg",
+        "spuDesc": "蛋糕现定现做，制作与配送需约1一2小时，如对水果有要求请备注，蛋糕上的水果随季节的变化而改变，如有问题欢迎致电13380361006",
+        "skuPromotionInfo": "",
+        "currentPrice": 117.88,
+        "originPrice": 228
+      },
+      {
+        "goodId": 110,
+        "spuName": "荷花音乐盒",
+        "img": "http://p0.meituan.net/wmproduct/c7ba61a23672d2c3209eabab335e9423379314.jpg",
+        "spuDesc": "需与蛋糕一起下单，单个不配送",
+        "skuPromotionInfo": "",
+        "currentPrice": 4.5,
+        "originPrice": 5
+      }
+    ]
   },
   {
     "id": 101,
-    "name": "添饭茶餐厅（天悦龙庭店）",
-    "img": "http://p0.meituan.net/waimaipoi/368ac72dcc2be498de68b024acf061aa298003.jpg",
+    "name": "佳源兴百货",
+    "img": "http://p0.meituan.net/waimaipoi/bfaa4676a93ae774c257b89c9aabacea24576.jpg",
     "grade": "4.6",
     "onSale": "4905",
     "minPriceTip": "¥28",
@@ -29,7 +130,18 @@
     "info": "满60减17; 满100减28",
     "discount": "本店支持开发票，开票金额30元起",
     "invoice": "http://p0.meituan.net/xianfu/476ba65ee80b6385bab292c085baed17940.png",
-    "poiTypeIcon": "http://p1.meituan.net/aichequan/a88918ba8699e15a5d16d5d7e09ad0022192.png"
+    "poiTypeIcon": "http://p1.meituan.net/aichequan/a88918ba8699e15a5d16d5d7e09ad0022192.png",
+    "goods": [
+      {
+        "goodId": 111,
+        "spuName": "脉动 青柠味维生素饮料 600ml/瓶",
+        "img": "http://p1.meituan.net/shangchao/82b8b156684d40d599fb7ccd1fbb2939.jpg",
+        "spuDesc": "约5磅，图片上的水果会随着季节变化而变动。蛋糕都是现定现做的，请提前2小时下单。全程免费配送，",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 167.04,
+        "originPrice": 288
+      }
+    ]
   },
   {
     "id": 102,

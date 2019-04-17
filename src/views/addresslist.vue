@@ -53,7 +53,7 @@ export default {
     onEdit () {
       console.log('1')
     },
-    onClickLeft(){
+    onClickLeft () {
       this.$router.back()
     }
   }

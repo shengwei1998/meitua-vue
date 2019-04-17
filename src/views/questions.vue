@@ -29,20 +29,20 @@ v-for="(items,index) in questions_tittle"
 <script>
 import { mapState } from 'vuex'
 export default {
-  data() {
+  data () {
     return {
-      activeNames: [""]
+      activeNames: ['']
     }
   },
-  computed:{
+  computed: {
     ...mapState(['questions_tittle'])
   },
   methods: {
-    onClickLeft(){
+    onClickLeft () {
       this.$router.back()
     }
-  },
-};
+  }
+}
 </script>
 
 <style lang="scss">
@@ -67,4 +67,3 @@ export default {
   }
 }
 </style>
-
