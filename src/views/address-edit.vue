@@ -2,21 +2,20 @@
   <div>
     <van-address-edit
     :area-list="areaList"
-    show-postal
     show-delete
-    show-set-default
     show-search-result
     :search-result="searchResult"
-    @save="onSave"
+    @save="onSave();ardddss(adresslist)"
     @delete="onDelete"
     @change-detail="onChangeDetail"
   />
-  <button @click="bkkk">55</button>
+
   </div>
 </template>
 
 
 <script>
+import { mapMutations } from 'vuex'
   export default {
   data() {
     return {
@@ -43,20 +42,19 @@
                 120105: '河北区',
               }
             },
-      searchResult: []
+      searchResult: [],
+      adresslist:[]
     }
   },
 
   methods: {
-    onSave() {
-      console.log(this.searchResult)
+    onSave(content){
+      this.adresslist=content
     },
     onDelete() {
       console.log(22)
     },
-    bkkk(){
-      console.log(this.searchResult)
-    },
+   ...mapMutations([ 'ardddss' ]),
     onChangeDetail(val) {
       if (val) {
         this.searchResult = [{
