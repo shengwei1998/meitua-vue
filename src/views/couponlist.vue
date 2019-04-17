@@ -2,7 +2,7 @@
 <div id="mt-couponlist">
 
 <van-popup v-model="showList" position="bottom">
- <van-nav-bar
+<van-nav-bar
   title="美团红包"
   left-arrow
   @click-left="onClickLeft"

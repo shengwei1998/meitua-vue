@@ -49,6 +49,7 @@ Vue.use(VueRouter)
     { path: '/couponlist', component: () => import('./views/couponlist.vue') },
     { path: '/login', component: () => import('./views/login.vue') ,},
     { path: '/detail/:id', component: () => import('./views/detail.vue') },
+    { path: '/search', component: () => import('./views/search.vue') ,},
     { path: '*', redirect: '/home' },
 
   ]

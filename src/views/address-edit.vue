@@ -1,15 +1,17 @@
 <template>
   <div>
+     <van-nav-bar
+        title="地址编辑"
+        left-arrow
+        @click-left="onClickLeft"
+      />
     <van-address-edit
     :area-list="areaList"
-    show-delete
     show-search-result
     :search-result="searchResult"
-    @save="onSave();ardddss(adresslist)"
-    @delete="onDelete"
+    @save="onSave"
     @change-detail="onChangeDetail"
   />
-
   </div>
 </template>
 
@@ -43,18 +45,16 @@ import { mapMutations } from 'vuex'
               }
             },
       searchResult: [],
-      adresslist:[]
+      adresslist:'',
     }
   },
-
   methods: {
     onSave(content){
       this.adresslist=content
-    },
-    onDelete() {
-      console.log(22)
-    },
-   ...mapMutations([ 'ardddss' ]),
+      console.log(this.adresslist)
+      this.$store.commit('ardd',this.adresslist)
+      this.$router.back()
+  },
     onChangeDetail(val) {
       if (val) {
         this.searchResult = [{
@@ -64,7 +64,10 @@ import { mapMutations } from 'vuex'
       } else {
         this.searchResult = [];
       }
-    }
+    },
+    onClickLeft(){
+      this.$router.back()
+      }
   }
 }
 </script>

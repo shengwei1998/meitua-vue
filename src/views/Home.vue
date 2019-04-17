@@ -1,7 +1,10 @@
 <template>
   <div>
     <div class="home_header">
-      <van-search placeholder="请输入商家或商品名称" v-model="value" shape="round" class="box" />
+      <transition name="rightto">
+          <van-search placeholder="请输入商家或商品名称" v-model="value" shape="round" class="box" @click='toserch'  v-if="show"/>
+          <van-search placeholder="请输入商家或商品名称" v-model="value" shape="round" class="next" @click='toserch' v-else/>
+      </transition>
     </div>
 
     <div class="home_content">
@@ -100,17 +103,56 @@ export default {
       tabColor: {
         color: '#000',
         'font-weight': 900
-      }
+      },
+      show:true
     }
-  }
+  },
+  methods: {
+    getchange(){
+      let that=this
+      window.onscroll=function(){
+        let sc=document.documentElement.scrollTop
+        if(sc>200){
+          that.show=false
+        }else{
+          that.show=true
+        }
+      }
+    },
+    toserch(){
+      this.$router.push('/search')
+    }
+  },
+  created() {
+    this.getchange()
+  },
 }
+
 </script>
 
 <style>
   .home_header{
     height: 54px;
   }
+  .home_header .box .van-search__content--round{
+    display: flex;
+    justify-content: flex-end;
+    flex: 0.6;
+  }
+  .home_header .next .van-search__content--round{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
   .box{
+    background: #000 !important;
+    width: 100%;
+    position: fixed;
+    z-index: 66;
+    top: 0;
+    left: 0;
+  }
+  .next{
     background: #000 !important;
     width: 100%;
     position: fixed;
@@ -204,3 +246,5 @@ export default {
     margin-left: 3px;
   }
 </style>
+
+

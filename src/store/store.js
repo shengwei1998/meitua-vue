@@ -38,7 +38,7 @@ const store = new Vuex.Store({
     //login登录页面
     login_phonenum:localStorage.getItem('pwd') ? JSON.parse(localStorage.getItem('pwd')) : {},
     //地址界面
-    adressd:[]
+    adressd:localStorage.getItem('arddress') ? JSON.parse(localStorage.getItem('arddress')) : []
   },
   mutations: {
     addpwd(state,pwds){
@@ -49,8 +49,9 @@ const store = new Vuex.Store({
       state.login_phonenum={}
       localStorage.clear()
     },
-    saveadress(state,addata){
+    ardd(state,addata){
       state.adressd.push(addata)
+      localStorage.setItem('arddress',JSON.stringify(state.adressd))
     }
   },
   getters: {
@@ -61,7 +62,8 @@ const store = new Vuex.Store({
           return element
         }
       }
-    }
+    },
+
   },
   actions: {
 
