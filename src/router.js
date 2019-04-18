@@ -49,6 +49,7 @@ let router = new VueRouter({
       ]
     },
     { path: '/detail/:id', name: 'detail', component: () => import('./views/detail.vue') },
+    { path: '/city', component: () => import('./views/City.vue') },
     { path: '/couponlist', component: () => import('./views/couponlist.vue') },
     { path: '/addresslist', component: () => import('./views/addresslist.vue') },
     { path: '/address-edit', component: () => import('./views/address-edit.vue') },
