@@ -1,0 +1,247 @@
+{
+  "data": {
+    "suggests": [
+      {
+        "content": "奥莱克",
+        "type": 1,
+        "queryAdditionInfo": {
+          "type": "11002"
+        }
+      },
+      {
+        "content": "禾顺煲仔饭",
+        "type": 1,
+        "queryAdditionInfo": {
+          "type": "11002"
+        }
+      },
+      {
+        "content": "天顺发煲仔饭",
+        "type": 1,
+        "queryAdditionInfo": {
+          "type": "11002"
+        }
+      },
+      {
+        "content": "1号粥店（福永店）",
+        "type": 1,
+        "queryAdditionInfo": {
+          "type": "11002"
+        }
+      },
+      {
+        "content": "煲味传奇",
+        "type": 1,
+        "queryAdditionInfo": {
+          "type": "11002"
+        }
+      },
+      {
+        "content": "煲味传奇",
+        "type": 1,
+        "queryAdditionInfo": {
+          "type": "11002"
+        }
+      },
+      {
+        "content": "爽滑饺子王咸骨煲仔粥(新田店)",
+        "type": 1,
+        "queryAdditionInfo": {
+          "type": "11002"
+        }
+      },
+      {
+        "content": "艾克士炸鸡汉堡(福永店)",
+        "type": 0,
+        "poiAdditionInfo": {
+          "wmPoiId": "982023977332039",
+          "status": 1,
+          "statusDesc": "",
+          "shippingTimeInfo": {
+            "inShippingTime": 1,
+            "begShippingTime": "",
+            "statusContent": "",
+            "descContent": "",
+            "reservationStatus": 0
+          },
+          "discounts": [
+            "http://p0.meituan.net/xianfu/f8bc8dffdbc805878aa3801a33f563cd1001.png",
+            "http://p1.meituan.net/xianfu/9c997ecce6150671b8459738a26f8bd9767.png"
+          ],
+          "distance": "2.8km",
+          "shippingFeeTip": "配送 ¥4",
+          "minPriceTip": "起送 ¥40"
+        }
+      },
+      {
+        "content": "爱上大碗菜（桥头店）",
+        "type": 0,
+        "poiAdditionInfo": {
+          "wmPoiId": "994316173706241",
+          "status": 1,
+          "statusDesc": "",
+          "shippingTimeInfo": {
+            "inShippingTime": 1,
+            "begShippingTime": "",
+            "statusContent": "",
+            "descContent": "",
+            "reservationStatus": 0
+          },
+          "discounts": [
+            "http://p0.meituan.net/xianfu/f8bc8dffdbc805878aa3801a33f563cd1001.png",
+            "http://p1.meituan.net/xianfu/9c997ecce6150671b8459738a26f8bd9767.png"
+          ],
+          "distance": "3.8km",
+          "shippingFeeTip": "配送 ¥5",
+          "minPriceTip": "起送 ¥20"
+        }
+      },
+      {
+        "content": "梅县腌面",
+        "type": 1,
+        "queryAdditionInfo": {
+          "type": "11002"
+        }
+      },
+      {
+        "content": "爱尚榴莲千层蛋糕（福永店）",
+        "type": 0,
+        "poiAdditionInfo": {
+          "wmPoiId": "919502138417412",
+          "status": 1,
+          "statusDesc": "",
+          "shippingTimeInfo": {
+            "inShippingTime": 1,
+            "begShippingTime": "",
+            "statusContent": "",
+            "descContent": "",
+            "reservationStatus": 0
+          },
+          "discounts": [
+            "http://p0.meituan.net/xianfu/f8bc8dffdbc805878aa3801a33f563cd1001.png"
+          ],
+          "distance": "614m",
+          "shippingFeeTip": "配送 ¥0",
+          "minPriceTip": "起送 ¥18"
+        }
+      },
+      {
+        "content": "奥尔良脆皮鸡烤肉拌饭(南洞店)",
+        "type": 0,
+        "poiAdditionInfo": {
+          "wmPoiId": "951546889381611",
+          "status": 1,
+          "statusDesc": "",
+          "shippingTimeInfo": {
+            "inShippingTime": 1,
+            "begShippingTime": "",
+            "statusContent": "",
+            "descContent": "",
+            "reservationStatus": 0
+          },
+          "discounts": [
+            "http://p0.meituan.net/xianfu/f8bc8dffdbc805878aa3801a33f563cd1001.png",
+            "http://p1.meituan.net/xianfu/9c997ecce6150671b8459738a26f8bd9767.png"
+          ],
+          "distance": "3.3km",
+          "shippingFeeTip": "配送 ¥3",
+          "minPriceTip": "起送 ¥15"
+        }
+      },
+      {
+        "content": "客家腌面",
+        "type": 1,
+        "queryAdditionInfo": {
+          "type": "11002"
+        }
+      },
+      {
+        "content": "牛肉丸",
+        "type": 1,
+        "queryAdditionInfo": {
+          "type": "11002"
+        }
+      },
+      {
+        "content": "牛肉丸汤",
+        "type": 1,
+        "queryAdditionInfo": {
+          "type": "11002"
+        }
+      },
+      {
+        "content": "牛肉",
+        "type": 1,
+        "queryAdditionInfo": {
+          "type": "11002"
+        }
+      },
+      {
+        "content": "牛肉粒",
+        "type": 1,
+        "queryAdditionInfo": {
+          "type": "11002"
+        }
+      },
+      {
+        "content": "你的炒饭（福永店）",
+        "type": 0,
+        "poiAdditionInfo": {
+          "wmPoiId": "910594376236010",
+          "status": 1,
+          "statusDesc": "",
+          "shippingTimeInfo": {
+            "inShippingTime": 1,
+            "begShippingTime": "",
+            "statusContent": "",
+            "descContent": "",
+            "reservationStatus": 0
+          },
+          "discounts": [
+            "http://p0.meituan.net/xianfu/f8bc8dffdbc805878aa3801a33f563cd1001.png",
+            "http://p1.meituan.net/xianfu/9c997ecce6150671b8459738a26f8bd9767.png"
+          ],
+          "distance": "4.6km",
+          "shippingFeeTip": "配送 ¥4",
+          "minPriceTip": "起送 ¥0"
+        }
+      },
+      {
+        "content": "鱼你在一起（酸菜鱼·福永店）",
+        "type": 0,
+        "poiAdditionInfo": {
+          "wmPoiId": "1066390019927173",
+          "status": 1,
+          "statusDesc": "",
+          "shippingTimeInfo": {
+            "inShippingTime": 1,
+            "begShippingTime": "",
+            "statusContent": "",
+            "descContent": "",
+            "reservationStatus": 0
+          },
+          "discounts": [
+            "http://p0.meituan.net/xianfu/f8bc8dffdbc805878aa3801a33f563cd1001.png",
+            "http://p1.meituan.net/xianfu/9c997ecce6150671b8459738a26f8bd9767.png"
+          ],
+          "distance": "3.1km",
+          "shippingFeeTip": "配送 ¥7",
+          "minPriceTip": "起送 ¥20"
+        }
+      },
+      {
+        "content": "你的炒饭",
+        "type": 1,
+        "queryAdditionInfo": {
+          "type": "11002"
+        }
+      }
+    ],
+    "tgtStids": "",
+    "logField": {
+      "suggestLogId": "12630011004146483"
+    }
+  },
+  "code": 0,
+  "msg": "成功"
+}

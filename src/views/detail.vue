@@ -57,6 +57,7 @@
       <van-goods-action-big-btn
         primary
         text="立即购买"
+        @click="tobuy"
       />
     </van-goods-action>
 
@@ -137,6 +138,9 @@ export default {
       var data = null
       data = this.catData.find(item => item.goodId === goodId)
       return data ? data.num : ''
+    },
+     tobuy(){
+      this.$router.push({name:'preview',params:{ sks: '123' } })
     }
   },
   activated () {

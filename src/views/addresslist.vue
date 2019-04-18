@@ -9,6 +9,7 @@
       v-model="chosenAddressId"
       :list="listNew"
       @add="onAdd"
+      @select="secaddress"
     />
   </div>
 </template>
@@ -17,7 +18,7 @@ import { mapState } from 'vuex'
 export default {
   data () {
     return {
-      chosenAddressId: '1',
+      chosenAddressId: ''
       // list: localStorage.getItem('arddress') ? JSON.parse(localStorage.getItem('arddress')) : []
     }
   },
@@ -37,10 +38,12 @@ export default {
     onAdd () {
       this.$router.push('/address-edit')
     },
-
+    secaddress(item,index){
+      this.$router.push({name:'preview',params:{ sks: item }})
+    },
     onClickLeft () {
       this.$router.back()
-    }
+    },
   }
 }
 </script>

@@ -38,9 +38,9 @@ let router = new VueRouter({
           meta: { tabNumber: 2 },
           beforeEnter: (to, from, next) => {
             // var islogin=false;
-            if(!localStorage.getItem('pwd')){
+            if (!localStorage.getItem('pwd')) {
               next('/login')
-            }else{
+            } else {
               next()
             }
           }
@@ -56,6 +56,7 @@ let router = new VueRouter({
     { path: '/couponlist', component: () => import('./views/couponlist.vue') },
     { path: '/login', component: () => import('./views/login.vue') },
     { path: '/search', component: () => import('./views/search.vue') },
+    { path: '/preview/:sks', name:'preview' ,component: () => import('./views/preview.vue') },
     { path: '*', redirect: '/home' }
   ]
 })
