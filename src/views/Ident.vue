@@ -29,12 +29,12 @@
 import { mapState, mapMutations } from 'vuex'
 export default {
   computed: {
-    ...mapState([
+    ...mapState('cat', [
       'catData'
     ])
   },
   methods: {
-    ...mapMutations([
+    ...mapMutations('cat', [
       'catAdd',
       'catReduce'
     ])

@@ -18,13 +18,13 @@ export default {
   data () {
     return {
       chosenAddressId: '1',
-      list: localStorage.getItem('arddress') ? JSON.parse(localStorage.getItem('arddress')) : []
+      // list: localStorage.getItem('arddress') ? JSON.parse(localStorage.getItem('arddress')) : []
     }
   },
   computed: {
     ...mapState([ 'adressd' ]),
     listNew () {
-      let abc = this.list
+      let abc = this.adressd ? JSON.parse(JSON.stringify(this.adressd)) : []
       for (let i = 0; i < abc.length; i++) {
         const element = abc[i]
         element.id = i

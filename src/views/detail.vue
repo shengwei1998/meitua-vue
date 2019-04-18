@@ -93,15 +93,15 @@ export default {
     }
   },
   computed: {
-    ...mapState(
-      [ 'catData' ]
-    ),
-    ...mapGetters([
+    ...mapState('cat', [
+      'catData'
+    ]),
+    ...mapGetters('cat', [
       'goodCatNum'
     ])
   },
   methods: {
-    ...mapMutations([
+    ...mapMutations('cat', [
       'catAdd',
       'catReduce'
     ]),
@@ -135,7 +135,7 @@ export default {
     },
     showNum (goodId) {
       var data = null
-      data = this.$store.state.catData.find(item => item.goodId === goodId)
+      data = this.catData.find(item => item.goodId === goodId)
       return data ? data.num : ''
     }
   },
