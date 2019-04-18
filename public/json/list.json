@@ -17,6 +17,8 @@
     "goods": [
       {
         "goodId": 100,
+        "num": 1,
+        "pinyin": "shuiguo",
         "spuName": "幸福生活",
         "img": "http://p0.meituan.net/wmproductdwm/e5d0b3ca50b8f8d765f8f5b2fd80c12a155627.jpg",
         "spuDesc": "约5磅，图片上的水果会随着季节变化而变动。蛋糕都是现定现做的，请提前2小时下单。全程免费配送，",
@@ -26,6 +28,8 @@
       },
       {
         "goodId": 101,
+        "num": 1,
+        "pinyin": "wanghong",
         "spuName": "2磅特惠水果蛋糕",
         "img": "http://p0.meituan.net/wmproductdwm/cabddde74799e9fad1b828a7ec648d36151780.jpg",
         "spuDesc": "蛋糕现定现做，制作与配送需约1一2小时，蛋糕上的水果随季节的变化而改变，如有问题欢迎致电13380361006",
@@ -35,6 +39,8 @@
       },
       {
         "goodId": 102,
+        "num": 1,
+        "pinyin": "shuiguo",
         "spuName": "3磅热销水果蛋糕",
         "img": "http://p0.meituan.net/wmproduct/8d4d997e5030fe83a423af9ce22a544b403650.jpg",
         "spuDesc": "蛋糕现定现做，制作与配送需约1一2小时，如对水果有要求请备注，蛋糕上的水果随季节的变化而改变，如有问题欢迎致电13380361006",
@@ -44,7 +50,9 @@
       },
       {
         "goodId": 103,
+        "num": 1,
         "spuName": "情定一生5磅",
+        "pinyin": "meigui",
         "img": "http://p1.meituan.net/wmproductdwm/bfad5fad67601a0d3232a41625c8dcc6136937.jpg",
         "spuDesc": "蛋糕现定现做，制作与配送需约1一2小时，新鲜水果夹心（芒果，火龙果，哈密瓜），如对水果有要求请备注，蛋糕上的水果随季节的变化而改变，如有问题欢迎致电13380361006",
         "skuPromotionInfo": "5.8折 限1份",
@@ -53,7 +61,9 @@
       },
       {
         "goodId": 104,
+        "num": 1,
         "spuName": "幸福多多3磅",
+        "pinyin": "wanghong",
         "img": "http://p1.meituan.net/wmproduct/27719e997a0cf79bc44be95d582e0a85378577.jpg",
         "spuDesc": "蛋糕现定现做，制作与配送需约1一2小时，如对水果有要求请备注，蛋糕上的水果随季节的变化而改变，如有问题欢迎致电13380361006",
         "skuPromotionInfo": "5.8折 限1份",
@@ -62,6 +72,8 @@
       },
       {
         "goodId": 105,
+        "num": 1,
+        "pinyin": "shuiguo",
         "spuName": "榴芒双拼2",
         "img": "http://p0.meituan.net/wmproductdwm/af2777e868ac6cf6844dd20deb9b7338125841.jpg",
         "spuDesc": "一半新鲜夹心，一半榴莲夹心，图片上的水果会随着季节变化而变动。蛋糕都是现定现做的，请提前2小时下单。",
@@ -71,6 +83,8 @@
       },
       {
         "goodId": 106,
+        "num": 1,
+        "pinyin": "ceng",
         "spuName": "2磅幸福一家子01",
         "img": "http://p1.meituan.net/wmproductdwm/da6b53d30eec084d4d61687848464c23183820.jpg",
         "spuDesc": "蛋糕现定现做，制作与配送需约1一2小时，如对水果有要求请备注，蛋糕上的水果随季节的变化而改变，如有问题欢迎致电13380361006",
@@ -80,6 +94,8 @@
       },
       {
         "goodId": 107,
+        "num": 1,
+        "pinyin": "danche",
         "spuName": "土豪蛋糕3磅",
         "img": "http://p0.meituan.net/wmproductdwm/3992cfb9f0fa8884e8f5b53720f5a110177815.jpg",
         "spuDesc": "蛋糕现定现做，制作与配送需约1一2小时，如对水果有要求请备注，蛋糕上的水果随季节的变化而改变，如有问题欢迎致电13380361006",
@@ -89,6 +105,8 @@
       },
       {
         "goodId": 108,
+        "num": 1,
+        "pinyin": "danche",
         "spuName": "3磅全心全意888",
         "img": "http://p0.meituan.net/wmproductdwm/83a0c94d695a88cf664f7c0ea600d5c5254749.jpg",
         "spuDesc": "蛋糕现定现做，制作与配送需约1一2小时，如对水果有要求请备注，蛋糕上的水果随季节的变化而改变，如有问题欢迎致电13380361006",
@@ -98,6 +116,8 @@
       },
       {
         "goodId": 109,
+        "num": 1,
+        "pinyin": "ceng",
         "spuName": "欢聚一堂3磅",
         "img": "http://p0.meituan.net/wmproductdwm/9a4f4bcd1eae57a92465c7f5c3c7b58e158313.jpg",
         "spuDesc": "蛋糕现定现做，制作与配送需约1一2小时，如对水果有要求请备注，蛋糕上的水果随季节的变化而改变，如有问题欢迎致电13380361006",
@@ -107,6 +127,8 @@
       },
       {
         "goodId": 110,
+        "num": 1,
+        "pinyin": "meigui",
         "spuName": "荷花音乐盒",
         "img": "http://p0.meituan.net/wmproduct/c7ba61a23672d2c3209eabab335e9423379314.jpg",
         "spuDesc": "需与蛋糕一起下单，单个不配送",
@@ -133,13 +155,162 @@
     "poiTypeIcon": "http://p1.meituan.net/aichequan/a88918ba8699e15a5d16d5d7e09ad0022192.png",
     "goods": [
       {
-        "goodId": 111,
-        "spuName": "脉动 青柠味维生素饮料 600ml/瓶",
-        "img": "http://p1.meituan.net/shangchao/82b8b156684d40d599fb7ccd1fbb2939.jpg",
+        "goodId": 121,
+        "spuName": "张新发槟榔 究脑壳 罐装",
+        "img": "http://p1.meituan.net/scproduct/e4a3bf4551563f3e48d5d807f4421e0e290302.jpg",
         "spuDesc": "约5磅，图片上的水果会随着季节变化而变动。蛋糕都是现定现做的，请提前2小时下单。全程免费配送，",
         "skuPromotionInfo": "5.8折 限1份",
-        "currentPrice": 167.04,
-        "originPrice": 288
+        "currentPrice": 5.7,
+        "originPrice": 9
+      },
+      {
+        "goodId": 122,
+        "spuName": "【品质之选】究脑壳",
+        "img": "http://p1.meituan.net/scproduct/d9225b5060a64e1cf9a32d6715bedf48383500.jpg",
+        "spuDesc": "海南优质原果、究头、波边、回味绵长",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 10
+      },
+      {
+        "goodId": 123,
+        "spuName": "【店长热荐】木糖醇",
+        "img": "http://p1.meituan.net/scproduct/0a3506d6d149e48c7fc3b05ed60b349c284895.jpg",
+        "spuDesc": "初入口时微涩、咀嚼之后口腔充满桂子油香味",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 15
+      },
+      {
+        "goodId": 124,
+        "spuName": "【镇店之宝】纹路籽",
+        "img": "http://p1.meituan.net/scproduct/608bfedaae81673ed7cdcc3c602f4f7e270299.jpg",
+        "spuDesc": "海南优质原果、整体均匀、条形带纹路、背胶光泽好、果质鲜嫩、口感醇厚",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 20
+      },
+      {
+        "goodId": 125,
+        "spuName": "清真益消原味活性乳酸菌风味酸奶",
+        "img": "http://p1.meituan.net/xianfudwm/bfe20dd61b94a9b61f8f96b24441c22c84069.jpg",
+        "spuDesc": "伊利 清真益消原味活性乳酸菌风味酸奶 450g/瓶",
+        "currentPrice": 8
+      },
+      {
+        "goodId": 126,
+        "spuName": "红枣风味发酵乳",
+        "img": "http://p1.meituan.net/shangchao/f943a6f9239e4017b8a675231504cb08.jpg",
+        "spuDesc": "伊利 红枣风味发酵乳 450g/瓶",
+        "currentPrice": 12
+      },
+      {
+        "goodId": 127,
+        "spuName": "哈尔滨 冰纯啤酒",
+        "img": "http://p0.meituan.net/xianfu/e049b7c63e799c930a5377251698f46344429.jpg",
+        "spuDesc": "冰川池水酿造，清冽甘醇，爽到你心",
+        "currentPrice": 4.7
+      },
+      {
+        "goodId": 128,
+        "spuName": "百威啤酒（高罐装）",
+        "img": "http://p1.meituan.net/xianfu/07e1694fbc50dead9ac900f3b83d163856761.jpg@100w_100h_1e_1c",
+        "spuDesc": "精选优质麦芽搭配上等啤酒花，麦香醇厚，一口爽心",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 3.7
+      },
+      {
+        "goodId": 129,
+        "spuName": "青岛 啤酒",
+        "img": "http://p1.meituan.net/xianfu/fab316a97098c02349bfda11d9f2407d48059.jpg@100w_100h_1e_1c",
+        "spuDesc": "精酿醇香，历久弥新",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 7.7
+      },
+      {
+        "goodId": 130,
+        "spuName": "科罗娜 (墨西哥)科罗娜啤酒",
+        "img": "http://p0.meituan.net/xianfu/88bc26b0de894139a2afdbf6f52843ca26596.jpg@100w_100h_1e_1c",
+        "spuDesc": "口感清醇的墨西哥啤酒",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 10.7
+      },
+      {
+        "goodId": 131,
+        "spuName": "(德国)凯撒黑啤酒",
+        "img": "http://p1.meituan.net/xianfu/e4d49907002294ef4f56a421aed4149449052.jpg@100w_100h_1e_1c",
+        "spuDesc": "口感浓烈饱满，入口难忘",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 9
+      },
+      {
+        "goodId": 132,
+        "spuName": "珠江0度精品啤酒",
+        "img": "http://p1.meituan.net/xianfu/2f8e3607cba8bcae357d3bbb7cd19b4147070.jpg@100w_100h_1e_1c",
+        "spuDesc": "#珠江0度精品啤酒600ML/瓶",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 5
+      },
+      {
+        "goodId": 133,
+        "spuName": "哈尔滨 冰爽啤酒",
+        "img": "http://p0.meituan.net/xianfu/d239daa4d111aed7f5cd1d2bdbd494a748699.jpg@100w_100h_1e_1c",
+        "spuDesc": "当哈啤遇上美食，再也不和体重斤斤计较",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 4.7
+      },
+      {
+        "goodId": 134,
+        "spuName": "自然浑浊型小麦啤酒",
+        "img": "http://p0.meituan.net/xianfu/d37003edc3064695de377b7bf03996b747998.jpg@100w_100h_1e_1c",
+        "spuDesc": "5,0 (德国)5,0自然浑浊型小麦啤酒500ml/罐",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 11
+      },
+      {
+        "goodId": 135,
+        "spuName": "哈尔滨冰纯啤酒",
+        "img": "http://p0.meituan.net/xianfu/e84a2799ff35c63e5d32e1859d64651962634.jpg@100w_100h_1e_1c",
+        "spuDesc": "吃得开心，当然也要喝的舒爽",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 5.5
+      },
+      {
+        "goodId": 136,
+        "spuName": "德博小麦啤酒",
+        "img": "http://p0.meituan.net/xianfu/a2d6ce0411d76ee2e753b2b3d7eb352645462.jpg@100w_100h_1e_1c",
+        "spuDesc": "麦香浓郁，口感清爽",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 11
+      },
+      {
+        "goodId": 137,
+        "spuName": "11度全麦白啤",
+        "img": "http://p1.meituan.net/xianfu/c453429711874e53d36e38608f3c846352599.jpg@100w_100h_1e_1c",
+        "spuDesc": "麦香浓郁，口味醇厚",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 13
+      },
+      {
+        "goodId": 138,
+        "spuName": "(德国)卢云堡啤酒",
+        "img": "http://p1.meituan.net/xianfu/a86b5c91f79005ebce6c55e255fccf6f39194.jpg@100w_100h_1e_1c",
+        "spuDesc": "浓郁麦香，清甜爽口",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 16
+      },
+      {
+        "goodId": 139,
+        "spuName": "凯旋1664白啤酒",
+        "img": "http://p1.meituan.net/xianfu/94f5781df3e0587a7ad249e3bb149a1b45251.jpg@100w_100h_1e_1c",
+        "spuDesc": "凯旋1664白啤酒高罐装500ml/罐",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 18
+      },
+      {
+        "goodId": 140,
+        "spuName": "凯旋1664桃红啤酒",
+        "img": "http://p0.meituan.net/xianfu/896122d8816481aab1a36041c6247d7e27843.jpg@100w_100h_1e_1c",
+        "spuDesc": "口感丰富，顺滑清香，让你一口清新",
+        "skuPromotionInfo": "5.8折 限1份",
+        "currentPrice": 20
       }
     ]
   },
