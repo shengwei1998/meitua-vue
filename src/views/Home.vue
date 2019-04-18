@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="home_all">
     <div class="home_header">
-        <div class="home_txt" v-if="show"><i class="iconfont icon-dizhi"></i> 定位中... <i class="iconfont icon-youjiantou"></i></div>
+        <div class="home_txt" v-if="show"><router-link to="/city"><i class="iconfont icon-dizhi"></i> 定位中... <i class="iconfont icon-youjiantou"></i></router-link></div>
       <transition name="rightto">
           <van-search placeholder="请输入商家或商品名称" v-model="value" shape="round" class="box" @click='toserch'  v-if="show"/>
           <van-search placeholder="请输入商家或商品名称" v-model="value" shape="round" class="next" @click='toserch' v-else/>
@@ -132,6 +132,9 @@ export default {
 </script>
 
 <style>
+  .home_all{
+    background: #fff;
+  }
   .home_header{
     height: 54px;
     position: relative;
@@ -144,15 +147,21 @@ export default {
     right: 10px;
     z-index: 9999;
   }
+  .home_txt>a{
+    color: #fff;
+    font-size: 16px;
+  }
   .home_header .box .van-search__content--round{
     display: flex;
     justify-content: flex-end;
     flex: 0.7;
+    transition: all .5s linear;
   }
   .home_header .next .van-search__content--round{
     display: flex;
     justify-content: center;
     flex: 1;
+    transition: all .5s linear;
   }
   .box{
     background: #000 !important;

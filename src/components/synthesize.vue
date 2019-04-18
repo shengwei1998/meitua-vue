@@ -136,6 +136,7 @@ export default {
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: 600;
+    font-size: 16px;
   }
   .box02{
     display: flex;

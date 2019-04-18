@@ -245,4 +245,7 @@ export default {
     background: #fff;
     z-index: 9999;
   }
+  .van-card__title{
+    font-size: 16px;
+  }
 </style>
