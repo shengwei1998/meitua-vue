@@ -13,22 +13,22 @@
   </div>
 </template>
 <script>
-import { mapState, mapGetters} from 'vuex'
+import { mapState } from 'vuex'
 export default {
   data () {
     return {
       chosenAddressId: '1',
-      list: localStorage.getItem('arddress') ? JSON.parse(localStorage.getItem('arddress')) :[]
+      list: localStorage.getItem('arddress') ? JSON.parse(localStorage.getItem('arddress')) : []
     }
   },
-  computed:{
+  computed: {
     ...mapState([ 'adressd' ]),
-    listNew(){
-       let abc = this.list
+    listNew () {
+      let abc = this.list
       for (let i = 0; i < abc.length; i++) {
-        const element = abc[i];
-        element.id=i
-        element.address=element.addressDetail
+        const element = abc[i]
+        element.id = i
+        element.address = element.addressDetail
       }
       return abc || []
     }
@@ -38,7 +38,7 @@ export default {
       this.$router.push('/address-edit')
     },
 
-    onClickLeft(){
+    onClickLeft () {
       this.$router.back()
     }
   }

@@ -104,28 +104,28 @@ export default {
         color: '#000',
         'font-weight': 900
       },
-      show:true
+      show: true
     }
   },
   methods: {
-    getchange(){
-      let that=this
-      window.onscroll=function(){
-        let sc=document.documentElement.scrollTop
-        if(sc>200){
-          that.show=false
-        }else{
-          that.show=true
+    getchange () {
+      let that = this
+      window.onscroll = function () {
+        let sc = document.documentElement.scrollTop
+        if (sc > 200) {
+          that.show = false
+        } else {
+          that.show = true
         }
       }
     },
-    toserch(){
+    toserch () {
       this.$router.push('/search')
     }
   },
-  created() {
+  created () {
     this.getchange()
-  },
+  }
 }
 
 </script>
@@ -246,5 +246,3 @@ export default {
     margin-left: 3px;
   }
 </style>
-
-

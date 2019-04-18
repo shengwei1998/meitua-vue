@@ -18,7 +18,7 @@
   </div>
 </template>
 <script>
-  const coupon = {
+const coupon = {
   available: 1,
   condition: '无使用门槛\n最多优惠12元',
   reason: '',
@@ -28,29 +28,29 @@
   endAt: 1514592000,
   valueDesc: '1.5',
   unitDesc: '元'
-};
+}
 
 export default {
-  data() {
+  data () {
     return {
       chosenCoupon: -1,
       coupons: [coupon],
       disabledCoupons: [coupon],
-      showList:true
+      showList: true
     }
   },
 
   methods: {
-    onChange(index) {
+    onChange (index) {
       this.$router.push('/center')
-      this.chosenCoupon = index;
+      this.chosenCoupon = index
     },
-    onExchange(code) {
-      this.coupons.push(coupon);
+    onExchange (code) {
+      this.coupons.push(coupon)
     },
-    onClickLeft() {
+    onClickLeft () {
       this.$router.push('/center')
-    },
+    }
   }
 }
 </script>
@@ -66,4 +66,3 @@ export default {
   }
 
 </style>
-
