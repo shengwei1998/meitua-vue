@@ -107,7 +107,7 @@ export default {
       'catReduce'
     ]),
     onClickLeft () {
-      this.$router.back()
+      this.$router.push('/home')
     },
     detList () {
       axios.get('/json/list.json', {
@@ -140,7 +140,13 @@ export default {
       return data ? data.num : ''
     },
      tobuy(){
-      this.$router.push({name:'preview',params:{ sks: '123' } })
+      if(this.$route.params.id){
+        localStorage.setItem('backdeatil', this.$route.params.id)
+        this.$router.push({name:'preview',params:{ sks: this.$route.params.id } })
+      }else{
+        localStorage.setItem('backdeatil', this.$route.params.sks)
+        this.$router.push({name:'preview',params:{ sks: this.$route.params.sks } })
+      }
     }
   },
   activated () {

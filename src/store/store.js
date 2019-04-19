@@ -38,6 +38,7 @@ const store = new Vuex.Store({
       { name: '美团协议与说明', icons: 'notes-o', url: '/agreement' }
     ],
     services_phone: '10109777',
+    saveadressd:[],
     login_phonenum: localStorage.getItem('pwd') ? JSON.parse(localStorage.getItem('pwd')) : {},
     adressd: localStorage.getItem('arddress') ? JSON.parse(localStorage.getItem('arddress')) : []
   },
@@ -53,6 +54,12 @@ const store = new Vuex.Store({
     ardd (state, addata) {
       state.adressd.push(addata)
       localStorage.setItem('arddress', JSON.stringify(state.adressd))
+    },
+    //保存一个地址
+    saveadress(state, savead){
+      state.saveadressd.push(savead)
+      let savesad=state.saveadressd.pop()
+      localStorage.setItem('savesad',JSON.stringify(savesad))
     }
   },
   getters: {

@@ -51,7 +51,13 @@ let router = new VueRouter({
     { path: '/detail/:id', name: 'detail', component: () => import('./views/detail.vue') },
     { path: '/city', component: () => import('./views/City.vue') },
     { path: '/couponlist', component: () => import('./views/couponlist.vue') },
-    { path: '/addresslist', component: () => import('./views/addresslist.vue') },
+    { path: '/addresslist',
+      component: () => import('./views/addresslist.vue'),
+      beforeEnter: (to, from, next) => {
+
+        next()
+      }
+    },
     { path: '/address-edit', component: () => import('./views/address-edit.vue') },
     { path: '/questions', component: () => import('./views/questions.vue') },
     { path: '/couponlist', component: () => import('./views/couponlist.vue') },

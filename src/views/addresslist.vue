@@ -40,6 +40,7 @@ export default {
     },
     secaddress(item,index){
       this.$router.push({name:'preview',params:{ sks: item }})
+      this.$store.commit('saveadress', item)
     },
     onClickLeft () {
       this.$router.back()

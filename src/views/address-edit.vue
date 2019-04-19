@@ -49,7 +49,6 @@ export default {
   methods: {
     onSave (content) {
       this.adresslist = content
-      console.log(this.adresslist)
       this.$store.commit('ardd', this.adresslist)
       this.$router.back()
     },

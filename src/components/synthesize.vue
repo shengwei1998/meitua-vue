@@ -5,7 +5,7 @@
         v-for="item in synList"
         :key="item.id"
       >
-        <router-link :to="'/detail/' + item.id">
+        <router-link :to="'/detail/' + (item.id ? item.id :'') ">
           <div class="synth_left">
             <img :src="item.poiTypeIcon" alt="" class="syn_img1">
             <img :src="item.img" alt="" class="syn_img2">
