@@ -73,59 +73,59 @@
 
 <script>
 export default {
-  name: "preview",
-  data() {
+  name: 'preview',
+  data () {
     return {
-      userid:'1',
+      userid: '1',
       list: [],
-      backdeatil: "",
-      shopdata: "",
-    };
+      backdeatil: '',
+      shopdata: ''
+    }
   },
   methods: {
-    //插件dailog
+    // 插件dailog
 
-    //返回
-    onClickLeft() {
-      this.backdeatil = localStorage.getItem("backdeatil")
-        ? localStorage.getItem("backdeatil")
-        : "";
-      this.$router.push({ name: "detail", params: { id: this.backdeatil } });
-      localStorage.removeItem("backdeatil");
+    // 返回
+    onClickLeft () {
+      this.backdeatil = localStorage.getItem('backdeatil')
+        ? localStorage.getItem('backdeatil')
+        : ''
+      this.$router.push({ name: 'detail', params: { id: this.backdeatil } })
+      localStorage.removeItem('backdeatil')
     },
-    onSubmit() {}
+    onSubmit () {}
   },
-  created() {
-    this.list = this.getsavead;
-    this.shopdata = JSON.parse(localStorage.getItem("catData"))
-      ? JSON.parse(localStorage.getItem("catData"))
-      : "";
+  created () {
+    this.list = this.getsavead
+    this.shopdata = JSON.parse(localStorage.getItem('catData'))
+      ? JSON.parse(localStorage.getItem('catData'))
+      : ''
   },
   computed: {
-    getsavead() {
-      return localStorage.getItem("savesad")
-        ? JSON.parse(localStorage.getItem("savesad"))
-        : [];
+    getsavead () {
+      return localStorage.getItem('savesad')
+        ? JSON.parse(localStorage.getItem('savesad'))
+        : []
     },
-    //计算总价格
-    addprices() {
-      let sum = 0;
+    // 计算总价格
+    addprices () {
+      let sum = 0
       this.shopdata.map(item => {
-        sum += Number(item.num * item.currentPrice) * 100;
-      });
-      return sum;
+        sum += Number(item.num * item.currentPrice) * 100
+      })
+      return sum
     },
 
-    //是否已添加地址
-    isshow() {
+    // 是否已添加地址
+    isshow () {
       if (this.getsavead.address) {
-        return true;
+        return true
       } else {
-        return false;
+        return false
       }
     }
   }
-};
+}
 </script>$options
 
 <style lang="scss">

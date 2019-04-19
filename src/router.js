@@ -42,7 +42,6 @@ let router = new VueRouter({
     { path: '/addresslist',
       component: () => import('./views/addresslist.vue'),
       beforeEnter: (to, from, next) => {
-
         next()
       }
     },

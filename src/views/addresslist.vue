@@ -38,8 +38,8 @@ export default {
     onAdd () {
       this.$router.push('/address-edit')
     },
-    secaddress(item,index){
-      this.$router.push({name:'preview',params:{ sks: item }})
+    secaddress (item, index) {
+      this.$router.push({ name: 'preview', params: { sks: item } })
       this.$store.commit('saveadress', item)
     },
     onClickLeft () {

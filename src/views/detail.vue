@@ -143,13 +143,13 @@ export default {
       data = this.catData.find(item => item.goodId === goodId)
       return data ? data.num : ''
     },
-     tobuy(){
-      if(this.$route.params.id){
+    tobuy () {
+      if (this.$route.params.id) {
         localStorage.setItem('backdeatil', this.$route.params.id)
-        this.$router.push({name:'preview',params:{ sks: this.$route.params.id } })
-      }else{
+        this.$router.push({ name: 'preview', params: { sks: this.$route.params.id } })
+      } else {
         localStorage.setItem('backdeatil', this.$route.params.sks)
-        this.$router.push({name:'preview',params:{ sks: this.$route.params.sks } })
+        this.$router.push({ name: 'preview', params: { sks: this.$route.params.sks } })
       }
     }
   },

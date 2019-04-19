@@ -47,14 +47,14 @@
 </template>
 
 <script>
-import { mapState, mapMutations,mapGetters } from 'vuex'
+import { mapState, mapMutations, mapGetters } from 'vuex'
 export default {
   data () {
     return {
       list: [],
-      loading: false,   //是否处于加载状态
-      finished: false,  //是否已加载完所有数据
-      isLoading: false,   //是否处于下拉刷新状态
+      loading: false, // 是否处于加载状态
+      finished: false, // 是否已加载完所有数据
+      isLoading: false, // 是否处于下拉刷新状态
       checked: 1,
       isShow: true
     }
@@ -63,7 +63,7 @@ export default {
     ...mapState('cat', [
       'catData'
     ]),
-    ...mapGetters('cat',[
+    ...mapGetters('cat', [
       'abc'
     ])
   },
@@ -81,29 +81,29 @@ export default {
     onSubmit () {
       alert(66)
     },
-    onLoad() {      //上拉加载
+    onLoad () { // 上拉加载
       setTimeout(() => {
-          for (let i = 0; i < 15; i++) {
-              this.list.push(this.list.length + 1);
-          }
-          this.loading = false;
-          if (this.list.length >= 60) {
-              this.finished = true;
-          }
-      }, 500);
+        for (let i = 0; i < 15; i++) {
+          this.list.push(this.list.length + 1)
+        }
+        this.loading = false
+        if (this.list.length >= 60) {
+          this.finished = true
+        }
+      }, 500)
     },
-    onRefresh() {       //下拉刷新
+    onRefresh () { // 下拉刷新
       setTimeout(() => {
-          this.finished = false
-          this.isLoading = false
-          this.list = []
-          this.onLoad()
-          location.reload()
-      }, 500);
+        this.finished = false
+        this.isLoading = false
+        this.list = []
+        this.onLoad()
+        location.reload()
+      }, 500)
     },
-    mounted(){
-      let winHeight = document.documentElement.clientHeight                          //视口大小
-      document.getElementById('list-content').style.height = (winHeight - 46) +'px'  //调整上拉加载框高度
+    mounted () {
+      let winHeight = document.documentElement.clientHeight // 视口大小
+      document.getElementById('list-content').style.height = (winHeight - 46) + 'px' // 调整上拉加载框高度
     }
   }
 }
