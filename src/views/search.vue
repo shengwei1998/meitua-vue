@@ -47,7 +47,7 @@ export default {
     return {
       value: '',
       hotlist: [],
-      searchlist:[]
+      searchlist: []
     }
   },
   methods: {
@@ -69,40 +69,43 @@ export default {
           }
         })
     },
-    getdataeat(){
+    getdataeat () {
       axios.get('/json/search_list.json')
-      .then( res=>{
-        if(res.status===200){
-          this.searchlist=res.data.data.suggests
-        }else{
-           alert('请求错误')
-        }
-      })
+        .then(res => {
+          if (res.status === 200) {
+            this.searchlist = res.data.data.suggests
+          } else {
+            alert('请求错误')
+          }
+        })
     },
-    addtittle(laName){
-      this.value=laName
+    addtittle (laName) {
+      this.value = laName
     }
   },
-  computed:{
-    fittlerdata(){
-      if(this.value !=''){
-          let fpdata=this.searchlist.filter(items=>{
-          return items.content.indexOf(this.value)!==-1
-     })
-      return fpdata
+  computed: {
+    fittlerdata () {
+      if (this.value !== '') {
+        let fpdata = this.searchlist.filter(items => {
+          return items.content.indexOf(this.value) !== -1
+        })
+        return fpdata
       }
     }
   },
   created () {
     this.getdatahot()
   },
-  mounted(){
+  mounted () {
     this.getdataeat()
   }
 }
 </script>
 
 <style lang="scss">
+body{
+  background: #fff;
+}
 #mt-search {
   width: 100%;
   height: auto;

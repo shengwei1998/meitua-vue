@@ -182,7 +182,7 @@ export default {
   .home_content{
     overflow: hidden;
     background: #fff;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     max-height: 170px;
   }
   .home_allLi{

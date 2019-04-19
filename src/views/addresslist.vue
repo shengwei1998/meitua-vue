@@ -44,7 +44,7 @@ export default {
     },
     onClickLeft () {
       this.$router.back()
-    },
+    }
   }
 }
 </script>

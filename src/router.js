@@ -21,18 +21,6 @@ let router = new VueRouter({
           ]
         },
         {
-          path: 'ident',
-          component: () => import('./views/Ident.vue'),
-          meta: { tabNumber: 1 },
-          beforeEnter: (to, from, next) => {
-            if (!localStorage.getItem('pwd')) {
-              next('/login')
-            } else {
-              next()
-            }
-          }
-        },
-        {
           path: 'center',
           component: () => import('./views/center.vue'),
           meta: { tabNumber: 2 },
@@ -63,7 +51,19 @@ let router = new VueRouter({
     { path: '/couponlist', component: () => import('./views/couponlist.vue') },
     { path: '/login', component: () => import('./views/login.vue') },
     { path: '/search', component: () => import('./views/search.vue') },
-    { path: '/preview/:sks', name:'preview' ,component: () => import('./views/preview.vue') },
+    { path: '/preview/:sks', name: 'preview', component: () => import('./views/preview.vue') },
+    {
+      path: '/ident',
+      component: () => import('./views/Ident.vue'),
+      meta: { tabNumber: 1 },
+      beforeEnter: (to, from, next) => {
+        if (!localStorage.getItem('pwd')) {
+          next('/login')
+        } else {
+          next()
+        }
+      }
+    },
     { path: '*', redirect: '/home' }
   ]
 })
