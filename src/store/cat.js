@@ -10,6 +10,13 @@ export default {
         total += item.num
       })
       return total
+    },
+    abc (state) {
+      var sum = 0
+      state.catData.map(tabs => {
+        sum += (tabs.num * tabs.currentPrice) * 100
+      })
+      return sum
     }
   },
   mutations: {

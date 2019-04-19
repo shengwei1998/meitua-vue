@@ -35,33 +35,33 @@
 
 <script>
 export default {
-  data() {
-      return {
-        // isshow:false,
-        list:''
-      }
-    },
+  data () {
+    return {
+      // isshow:false,
+      list: ''
+    }
+  },
   methods: {
-    onClickLeft() {
-      this.$router.back();
+    onClickLeft () {
+      this.$router.back()
     },
-    toadress(){
+    toadress () {
       this.$router.push('/addresslist')
     }
   },
-  activated(){
-    this.list=this.$route.params.sks
+  activated () {
+    this.list = this.$route.params.sks
   },
-  computed:{
-    isshow(){
-      if(this.list=''){
-        return true
-      }else{
+  computed: {
+    isshow () {
+      if (this.list === '') {
         return false
+      } else {
+        return true
       }
     }
   }
-};
+}
 </script>
 
 <style lang="scss">
@@ -151,4 +151,3 @@ body {
  }
 }
 </style>
-

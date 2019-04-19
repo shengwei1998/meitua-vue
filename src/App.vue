@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app_box">
     <transition
       enter-active-class="animated rotateIn"
       leave-active-class="animated rotateOut"
@@ -10,3 +10,9 @@
     </transition>
   </div>
 </template>
+
+<style>
+  body {
+    font-size: 16px;
+  }
+</style>

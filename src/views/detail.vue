@@ -27,9 +27,9 @@
             :origin-price="item.originPrice"
           >
             <div slot="footer">
-              <van-button size="mini" @click="catReduce(item)" class="det_01">-</van-button>
+              <van-button size="mini" @click="catReduce(item);fn2()" class="det_01">-</van-button>
               <span>{{ showNum(item.goodId) }}</span>
-              <van-button size="mini" @click="catAdd(item)" class="det_01">+</van-button>
+              <van-button size="mini" @click="catAdd(item);fn1()" class="det_01">+</van-button>
             </div>
           </van-card>
         </div>
@@ -106,6 +106,12 @@ export default {
       'catAdd',
       'catReduce'
     ]),
+    fn1 () {
+      this.$toast('添加成功')
+    },
+    fn2 () {
+      this.$toast('删除成功')
+    },
     onClickLeft () {
       this.$router.back()
     },
@@ -115,8 +121,6 @@ export default {
           id: this.$route.params.id
         }
       }).then(res => {
-        /* console.log(res.data[0].goods)
-         this.catData = res.data[0].goods */
         if (res.status === 200) {
           let data = res.data
           this.info = data.find(item => {
@@ -139,8 +143,8 @@ export default {
       data = this.catData.find(item => item.goodId === goodId)
       return data ? data.num : ''
     },
-     tobuy(){
-      this.$router.push({name:'preview',params:{ sks: '123' } })
+    tobuy () {
+      this.$router.push({ name: 'preview', params: { sks: '123' } })
     }
   },
   activated () {
@@ -251,5 +255,12 @@ export default {
   }
   .van-card__title{
     font-size: 16px;
+  }
+  .van-toast--text {
+    min-width: 1.2rem;
+    min-height: 1.2rem;
+  }
+  .van-toast {
+    font-size: .22rem;
   }
 </style>
