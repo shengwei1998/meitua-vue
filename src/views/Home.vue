@@ -246,8 +246,10 @@ export default {
     top: 54px;
     background: #fff;
     z-index: 99;
+    box-sizing: border-box;
   }
   .home_list>ul{
+    background: #fff;
     height: 40px;
     display: flex;
     align-items: center;

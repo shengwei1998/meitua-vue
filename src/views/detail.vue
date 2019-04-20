@@ -55,6 +55,14 @@
         text="店铺"
       />
       <van-goods-action-big-btn
+        v-if="goodCatNum"
+        primary
+        text="立即购买"
+        @click="tobuy"
+      />
+      <van-goods-action-big-btn
+        v-else
+        disabled
         primary
         text="立即购买"
         @click="tobuy"

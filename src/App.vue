@@ -1,9 +1,10 @@
 <template>
   <div class="app_box">
     <transition
-      enter-active-class="animated rotateIn"
-      leave-active-class="animated rotateOut"
+      enter-active-class="animated fadeIn"
+      leave-active-class="animated fadeOut"
     >
+
       <keep-alive exclude="preview">
         <router-view></router-view>
       </keep-alive>

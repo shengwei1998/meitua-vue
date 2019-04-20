@@ -93,7 +93,9 @@ export default {
       this.$router.push({ name: 'detail', params: { id: this.backdeatil } })
       localStorage.removeItem('backdeatil')
     },
-    onSubmit () {}
+    onSubmit () {
+      this.$router.replace({ path: '/pay' })
+    }
   },
   created () {
     this.list = this.getsavead

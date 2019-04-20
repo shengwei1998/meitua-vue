@@ -35,6 +35,19 @@
 
     <van-submit-bar
       :price="abc"
+      v-if="goodCatNum"
+      button-text="提交订单"
+      @submit="onSubmit"
+    >
+      <van-checkbox v-model="checked">全选</van-checkbox>
+      <span slot="tip" v-if="isShow" @click="isShow = false">
+        你的收货地址不支持同城送, <router-link to="/addresslist">修改地址</router-link>
+      </span>
+    </van-submit-bar>
+    <van-submit-bar
+      :price="abc"
+      disabled
+      v-else
       button-text="提交订单"
       @submit="onSubmit"
     >
@@ -64,7 +77,8 @@ export default {
       'catData'
     ]),
     ...mapGetters('cat', [
-      'abc'
+      'abc',
+      'goodCatNum'
     ])
   },
   methods: {
@@ -79,7 +93,7 @@ export default {
       this.$toast('删除成功')
     },
     onSubmit () {
-      alert(66)
+      this.$router.push({ path: '/pay' })
     },
     onLoad () { // 上拉加载
       setTimeout(() => {
